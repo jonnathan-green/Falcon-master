@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu De Navegacion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu" id="menu">
+        <div class="contenedor contenedor-botones-menu">
+            <button id="botonMenuBarras" class="botonMenuBarras"><i class="fas fa-bars"></i></button>
+            <button id="botonMenuCerrar" class="botonMenuCerrar"><i class="fas fa-times"></i></button>   
+        </div>
+
+        <div class="contenedor contenedor-enlaces-nav">
+            <div class="botonDepartamentos" id="botonDepartamentos">
+                <p>Todos los <span>Departamentos</span></p>
+                <i class="fas fa-caret-down"></i>
+            </div>
+
+            <div class="enlaces">
+                <a href="#">Cuenta</a>
+                <a href="#">Promociones</a>
+                <a href="#">Mesa de Regalos</a>
+                <a href="#">Ayuda</a>
+                
+            </div>
+        </div>
+
+        <div class="contenedor contenedor-grid">
+            <div class="grid activo" id="grid">
+                 <div class="categorias">
+                     <button class="botonRegresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                     <h3 class="subtitulo"> Categorias</h3>
+
+                     <a href="#" data-categoria="tecnologia-y-computadoras">tecnologia y computadoras<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="libros">libros<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="ropa-y-accesorios">Ropa y accesorios<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="hogar-y-cocina">Hogar y cocina<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="juguetes">jueguestes<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="salud-y-belleza">salud y belleza<i class="fas fa-angle-right"></i></a>
+                     <a href="#" data-categoria="alimentos-y-bebidas">alimentos y bebidas<i class="fas fa-angle-right"></i></a>
+                 </div>
+
+                 <div class="contenedor-subcategorias">
+                     <div class="subcategoria activo" data-categoria="tecnologia-y-computadoras">
+                         <div class="enlaces-subcategorias">
+                             <button class="botonRegresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                             <h3 class="subtitulo">Tecnologia y computadoras</h3>
+                             <a href="#">Laptops</a>
+                             <a href="#">Tablets</a>
+                             <a href="#">computadora de escritorio</a>
+                             <a href="#">Monitores</a>
+                             <a href="#">Componentes</a>                         </div>
+                         <div class="banner-subcategoria">
+                             <a href="#">
+                                 <img src="/img/tecnologia-banner-1.png" alt="">
+                             </a>
+                         </div>
+                         <div class="galeria-subcategorias">
+                             <a href="#">
+                                 <img src="/img/tecnologia-galeria-1.png" alt="">
+                             </a>
+                             <a href="#">
+                                <img src="/img/tecnologia-galeria-2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/img/tecnologia-galeria-3.png" alt="">
+                            </a>
+                             <a href="#">
+                                <img src="/img/tecnologia-galeria-4.png" alt="">
+                            </a>
+                            
+                         </div>
+
+                     </div>
+
+                 </div>
+            </div>
+        </div>
+    </nav>
+ 
+    <main class="contenedor">
+        <article></article>
+    </main>
+    <script src="https://kit.fontawesome.com/450cb7538d.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>   
+</body>
+</html>

@@ -1,0 +1,265 @@
+ *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EAEDED;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+main article{
+    background: #FFFF;
+    margin: 20px 0;
+    padding: 20px;
+    height: 1000px;
+}
+
+/* -------------------------*/
+/*      Enlaces del nav     */
+
+.menu {
+    background: #232F3F;
+    padding: 5px 0;
+    margin-bottom: 20px;
+}
+
+.menu .contenedor-botones-menu {
+    display: none; 
+    justify-content: space-between;
+}
+
+.menu .contenedor-botones-menu button{
+    font-size: 20px;
+    color: #FFF;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    display:  inline-block;
+    cursor: pointer;
+    background: none;
+}
+
+.menu .contenedor-botones-menu button:hover{
+    border: 1px solid rgba(255, 255, 255, 4);
+}
+
+.menu .contenedor-botones-menu .botonMenuCerrar{
+    display: none;
+}
+
+.menu .contenedor-botones-menu .botonMenuCerrar.activo{
+    display:inline-block;
+}
+
+.menu .contenedor-enlaces-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .botonDepartamentos {
+    color: #FFF;
+    padding: 7px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid transparent;
+    font-size: 12px;
+    cursor: default;
+
+}
+.menu .botonDepartamentos i {
+    margin-left: 20px;
+    position: relative;
+    bottom: 3px;
+}
+
+.menu .botonDepartamentos:hover {
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.menu .botonDepartamentos span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a{
+    color: #CCC;
+    border: 1px solid transparent;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 14 px;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a:hover {
+    border: 1px solid rgba(255, 255, 255, 4);
+}
+
+/* -------------------------*/
+/*      GRID CATEGORIAS     */
+
+.contendor-grid {
+    position: relative;
+}
+
+.grid {
+    width: 59.4%;
+    display: none;
+    position: absolute;  
+    top: 55px;
+    z-index: 1000;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "categorias subcategorias subcategorias subcategorias";
+}
+
+.grid.activo {
+    display: grid;
+}
+
+.grid::before{
+    content: "";
+    display: block;
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #FFF;
+    position: absolute;
+    top: -5px;
+    left: 65px;
+}
+
+.grid > div {
+    background: #FFF;
+    box-shadow: 0px 3px 6px  rgba(0, 0, 0, .10);
+}
+
+.grid .botonRegresar {
+    background: #232F3E;
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.grid .botonRegresar {
+    margin-right: 10px;
+
+}
+
+.grid .categorias {
+    grid: categorias;
+    padding-top: 10px;
+    min-height: 300px;
+    overflow: auto;
+}
+
+.grid .categorias .subtitulo {
+    display:none;
+}
+
+.grid .categorias a {
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.grid .categorias a i{
+    display: none;
+}
+
+.grid .categorias a:hover {
+    color: #e47911;
+    font-weight: bold;
+}
+
+.grid .categorias a:hover i {
+    display: inline-block;
+}
+
+
+/* -------------------------*/
+/*      GRID CATEGORIAS     */
+
+.grid .contenedor-subcategorias{
+    grid-area: subcategorias;
+}
+
+.grid .subcategoria {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.grid .subcategoria.activo {
+    display: grid;
+}
+
+.grid .subcategoria img{
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid .enlaces-subcategorias{
+    padding-top: 10px;
+    height: 100%;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.grid .enlaces-subcategorias a{
+    color: #000;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+    
+}
+
+.grid .enlaces-subcategorias a:hover{
+    color: #e47911;
+}
+
+.grid .subtitulo{
+    font-size: 19px;
+    font-weight: normal;
+    color: #e47911;
+    padding: 10px 20px;
+}
+
+.grid .banner-subcategoria a {
+    display: block;
+    height: 100%;
+}
+
+.grid .galeria-subcategorias {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.grid .galeria-subcategorias a {
+    width: 50%;
+    height: 50%;
+}
