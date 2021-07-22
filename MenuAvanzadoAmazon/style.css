@@ -15,8 +15,8 @@ a {
 
 .contenedor {
     margin: auto;
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 1500px;
 }
 
 main article{
@@ -115,7 +115,7 @@ main article{
 }
 
 .grid {
-    width: 59.4%;
+    width: 78.9%;
     display: none;
     position: absolute;  
     top: 55px;
@@ -262,4 +262,158 @@ main article{
 .grid .galeria-subcategorias a {
     width: 50%;
     height: 50%;
+}
+
+
+@media screen and (max-width: 1600px){
+    
+    .grid {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1500px){
+    
+    .grid {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .menu .contenedor{
+        width: 100%;
+    }
+
+    .menu .contenedor-enlaces.nav {
+        padding: 0 10px;
+    }
+
+    .grid{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .menu .contenedor{
+        width: 80%;
+    }
+    .grid {
+        width: 80%;
+    }
+
+    .menu .contenedor-botones-menu{
+        display: flex;
+    }
+
+    .menu .contenedor-enlaces-nav{
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        left: 0;
+        background: #232F3E;
+        height: 100vh;
+        width: 80%;
+        z-index: 2000;
+        transition: .3s ease all;
+        transform: translate(-100%);
+
+    }
+
+    .menu .contenedor-enlaces-nav.activo{
+        transform: translate(0%);
+    }
+
+    .menu .botonDepartamentos {
+        width: 100%;
+        align-content: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menu .botonDepartamentos i{
+        position: static;
+        margin-left: 20px;
+        transform: rotate(-90deg);
+
+    }
+
+    .menu .enlaces{
+        width: 100%;
+    }
+
+    .menu .enlaces a{
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+
+    }
+
+    .grid {
+        display: grid;
+        transition: .3s ease all;
+        transform: translate(-100%);
+        z-index: 3000;
+        width: 320%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        grid-template-areas: " categoria categorias categorias catrgorias";
+
+
+    }
+
+    .grid.activo{
+        transform: translateX(0);
+    }
+
+    .grid::before{
+        display: none;
+    }
+
+    .grid .botonRegresar{
+        display: inline-block;
+    } 
+    .grid .categorias .subtitulo{
+        display: block;
+    } 
+
+    .grid .contenedor-subcategorias{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: .3s ease all;
+        overflow: auto;
+    }
+
+    .grid .contenedor-subcategorias.activo{
+        transform: translateX(0);
+    }
+
+    .grid .contenedor-subcategorias .subcategoria {
+        grid-template-columns: 1fr;
+    }
+
+    .grid .contenedor-subcategorias .banner-subcategoria{
+        width: 25%;
+        min-height: 250px;
+        max-height: 350px;
+    }
+
+    .grid .contenedor-subcategorias .enlaces-subcategorias{
+        min-height: 50vh;
+        overflow: auto;
+    }
+    .grid .contenedor-subcategorias .galeria-subcategorias{
+        width: 25%;
+        height: 100%;
+    }
+
 }
